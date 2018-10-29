@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>添加商品</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/AddGoods.css" />
+</head>
+<body>
+    <div id="head">依谷后台管理系统</div>
+    
+        <div id="nav">
+        <ul id="ul_list">
+            <li  class="li_color "><a href="home.html" >页面渲染效果</a></li>
+            <li class="li_color "><a href="FindDelete.html">查找删除商品</a></li>
+            <li  class="li_color"><a href="AddGoods.html">增加商品</a></li>
+            <li  class="li_color"><a href="layoff.html">炒鱿鱼</a></li>
+            <li class="li_color"><a href="leaveWord.html">留言</a></li>
+        </ul>
+    </div>
+    <div id="goods">
+        <span>商品名：<input type="text" placeholder="请输入商品名称"class="goods_name"/></span>
+        <span>价格：<input type="text" placeholder="请输入商品价格"class="goods_price"/></span>
+        
+            <div class="picture">
+                <img src="../images/shuai.png" alt="" class="pho"/>
+                <span>点击图片框选取图片</span>
+                <input type="file" name="photo" id="fileNode"  onchange="selectFile(this)"/>
+            </div>
+            
+       <input type="button" id="ok" value="确定"/>
+
+    
+    </div>
+    <script type="text/javascript" src="../javascripts/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="../javascripts/AddGoods_l.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/login.css" />    
+</head>
+<body>
+    <form action="" id="s_form" method="post">
+        <div class="amdin-login-bg">
+            <img style="position: fixed;" src="../images/admin-bg.jpg" height="100%" width="100%">
+        </div>
+        <div class="amdin-login-main"></div>
+        <div class="amdin-login-nr">
+            <ul>
+                <li><a href="javascript:void(0)" target="_self"><img src="../images/logo_login.png" alt="点击进入依谷首页"></a></li>
+                <li class="amdin-login-nr-wz">依谷管理系统<span>还没有账号？<a href="zhuce.html">注册</a></span></li>
+                <li><strong><img src="../images/register_01.png"></strong><input type="text" id="name" name="membername" class="amdin-login-nr-k" placeholder="手机号/用户名"></li>
+                <li id="name_tips">&nbsp;</li>
+                <li><strong><img src="../images/register_02.png"></strong><input type="password" id="pwd" name="memberpwd" class="amdin-login-nr-k" placeholder="密码"></li>
+                <li id="pwd_tips">&nbsp;</li>
+                <li><h1 style="position:relative;top:8px;font-size: 16px;">验证码</h1><input type="text" id="r_code" name="r_code" class="amdin-login-nr-k-x" maxlength="4" placeholder="验证码">
+                <div class="amdin-login-nr-k-x-r">
+                       点击获取验证码
+                </div>
+                </li>
+                <li>&nbsp;</li>
+                <li>
+                    <div class="squaredTwo">
+                        <input type="checkbox" value="None" id="squaredTwo" name="check" checked=""> <label for="squaredTwo"></label>
+                    </div>
+                    <h1>记住我</h1> <span><a href="#" style="color: #fff;">忘记密码？</a></span>
+                </li>
+                <li><a href="javascript:void(0);">
+                        <div class="amdin-login-nr-login">
+                            <font style="color: #333; font-size: 20px;">登 录</font>
+                            <input id="redirect_uri" value="/myEgu.action" type="hidden">
+                        </div>
+                      </a>
+                </li>
+                
+            </ul>
+        </div>
+    </form>
+<!-- <script type="text/javascript" src="javascript/jquery-3.2.1.js"></script> 路径写错，javaScripts!!!!少写一个s-->
+ <script type="text/javascript" src="../javascripts/jquery-3.2.1.js"></script>
+ <script type="text/javascript" src="../javascripts/login_l.js"></script>
+</body>
+</html>

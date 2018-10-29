@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>注册</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/register.css" />
+    
+</head>
+<body>
+    <div class="amdin-register-bg"><img style="position:fixed;" src="../images/admin-re-bg.jpg" height="100%" width="100%"></div>
+    <div class="amdin-register-main"></div>
+    <form id="s_form" method="post" name="regist_form" action="../member/register.action">
+    <div class="amdin-register-nr">
+    <ul>
+    <li><img src="../images/logo_login.png" style="d"></li>
+    <li class="amdin-register-nr-wz">注册<span>已有账号<a href="register.html">登录</a></span></li>
+    <li>
+        <h2><img src="../images/register_04.png"></h2><input type="text" class="amdin-register-nr-k"  id="mobile" name="mobile" maxlength="11"><div class="admin-register-ts">请输入手机号</div>
+        <div id="p_chk"></div>
+    </li>
+    <li id="phone_tips">&nbsp;</li>
+    <li><h2><img src="../images/register_05.png"></h2><input type="text" class="amdin-register-nr-k-x"  id="validcode" name="validcode" maxlength="6" ><div class="admin-register-ts">请输短信验证码</div><button id="v_code_sms" class="amdin-register-nr-k-x-r-s" type="button">发送验证码</button><div id="ms_chk">&nbsp;</div></li>
+    <li id="ms_tips">&nbsp;</li>
+    <li><h2><img src="../images/register_02.png"></h2><input type="password" class="amdin-register-nr-k"  id="txtpwd" name="txtpwd" ><div class="admin-register-ts">请输入密码</div><div id="pwdchk"></div></li>
+    <li id="pwd_tips">&nbsp;</li>
+    <li><h2><img src="../images/register_02.png"></h2><input type="password" class="amdin-register-nr-k"  id="t_pwd" name="t_pwd" ><div class="admin-register-ts">请输确认密码</div><div id="t_chk"></div></li>
+    <li id="t_pwd_tips">&nbsp;</li>
+    <li> <div class="squaredr"><input type="checkbox" id="check" name="check" checked="checked"> <label for="squaredr"></label></div><h1>同意<strong style="border-bottom:#000 1px solid; font-size:16px; font-weight:600;" onclick="ShowDiv('MyDiv','fade')" id="button1"><a href="#" style="color:#333;">依谷网服务协议</a></strong></h1><span><a href="#" style="color:#fff;">忘记密码？</a></span>
+    </li>
+    <li><a href="javascript:void(0);"><div class="amdin-login-nr-login"><font style="color:#fff; font-size:20px;">完成</font></div></a></li>
+    </ul>
+    </div>
+    <input id="come_from" name="come_from" type="hidden" value="">
+    <input id="friend_id" name="friend_id" value="null" type="hidden">
+    <input id="reg_type" type="hidden">
+    </form>
+    <!--弹出层时背景层DIV-->
+    <div id="fade" class="admin-r-black-overlay">
+    </div>
+    <div id="MyDiv" class="admin-r-white-content">
+    <span onclick="CloseDiv('MyDiv','fade')"></span>
+    <div class="admin-r-white-content-wz">
+    <p>欢迎访问依谷网！</p>
+
+
+    </div></div>
+
+<script type="text/javascript"src="../javascripts/jquery-3.2.1.js"></script>
+<script type="text/javascript"src="../javascripts/register_l.js"></script>
+</body>
+</html>

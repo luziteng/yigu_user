@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>添加商品</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/leaveWord.css" />
+</head>
+<body>
+    <div id="head">依谷后台管理系统</div>
+    
+        <div id="nav">
+        <ul id="ul_list">
+            <li  class="li_color "><a href="home.html" >页面渲染效果</a></li>
+            <li class="li_color "><a href="FindDelete.html">查找删除商品</a></li>
+            <li  class="li_color"><a href="AddGoods.html">增加商品</a></li>
+            <li  class="li_color"><a href="layoff.html">炒鱿鱼</a></li>
+            <li class="li_color"><a href="leaveWord.html">留言</a></li>
+        </ul>
+    </div>
+ 
+    <textarea name="" id="Words" ></textarea>
+    <input type="button" value="发送" id="send"/>
+    <ul id="messageList">
+        
+    </ul>
+    <script type="text/javascript" src="../javascripts/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="../javascripts/socket.io.js"></script>
+    <script type="text/javascript">
+    var socket = io('http://localhost:3423');
+    //socket.on监听
+            socket.on('connect', function() {});
+            socket.on('event', function(data) {});
+            socket.on('disconnect', function() {});
+            socket.on('sendMessageToAllClient', function(data) {
+                console.log(data);
+                $("#messageList").append(`
+                    <li>${data}</li>    
+                `)
+            });
+            $("#send").click(function(){
+                socket.emit("sendMessageToServer",$("#Words").val());
+            })
+    </script>
+</body>
+</html>
